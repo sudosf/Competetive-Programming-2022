@@ -16,6 +16,7 @@ using namespace std::chrono;
 // and print the time required by sort function
 int main() {
     
+	// optimize for faster reading of input
 	ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
