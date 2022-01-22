@@ -3,13 +3,13 @@
 Google Team Programming challange for 2022 where programmers, developers and engineers are tasked 
 to solve a coding problem under a limited amount while working as a team.
 
-##The Team:
+## The Team:
 - Ekansh Sanger AKA Anshu
 - Siyabonga Fortune AKA Sudo S
 - Abhishek Kumar AKA Abhi
 - Shruti Sakhare AKA Lily
 
-##Practice Problems links
+## Practice Problems links
 Source: hackerearth.com
 
 Problem: Cost of balloons
