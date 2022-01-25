@@ -2,10 +2,17 @@
 
 using namespace std;
 
+// global array for storing fib values
+int term[1000];
+
 int factorial (int n) {
     if (n == 0 || n == 1) return 1;
+    if (term[n] != 0) return term[n];
 
-    return n * factorial(n-1);
+    else {
+        term[n] = n * factorial(n-1);
+        return term[n];
+    }
 }
 
 int main () {
