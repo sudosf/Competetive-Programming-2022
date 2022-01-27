@@ -2,7 +2,7 @@
 
 using namespace std;
 
-// global array for storing fib values
+// global array for memoization
 int term[1000];
 
 int factorial (int n) {
