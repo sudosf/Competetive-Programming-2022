@@ -2,6 +2,9 @@
 
 using namespace std;
 
+// global variables
+fstream file;
+
 class Client {
     public:
         vector<string> liked;
@@ -21,7 +24,7 @@ class Client {
         };
 };
 
-fstream file; 
+ 
 
 void createPizza(string filename) {
 
@@ -39,27 +42,30 @@ void createPizza(string filename) {
         cout <<"\nTotal Clients: "<< total_clients << "\n";
 
         for (int i = 1; getline(file, line); i++) {
-            line[0] = ' ';
+            line[0] = ' '; // remove number from string
 
             Client client;
 
-            // add liked ingredients
+            // split string to vector and...
+            // add client liked ingredients
             istringstream iss_liked(line);
             copy(istream_iterator<string>(iss_liked),
                 istream_iterator<string>(),
                 back_inserter(client.liked));
             
             getline(file, line);
-            line[0] = ' ';
+            line[0] = ' '; // remove number from string
 
-            // add disliked ingredients
+            // split string to vector and...
+            // add client disliked ingredients
             istringstream iss_disliked(line);
             copy(istream_iterator<string>(iss_disliked),
                 istream_iterator<string>(),
                 back_inserter(client.disliked));
 
-            // create client node
-            client.matches.first = to_string(i);   
+            // create and name client node
+            string client_node = to_string(i);
+            client.matches.first = client_node;   
 
             clients.push_back(client);
         }
