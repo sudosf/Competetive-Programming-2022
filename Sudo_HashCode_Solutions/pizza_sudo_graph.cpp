@@ -80,9 +80,9 @@ int main() {
 
     createPizza("a_an_example.in.txt");
     createPizza("b_basic.in.txt");
-    // createPizza("c_coarse.in.txt");
-    // createPizza("d_difficult.in.txt");
-    // createPizza("e_elaborate.in.txt");
+    createPizza("c_coarse.in.txt");
+    createPizza("d_difficult.in.txt");
+    createPizza("e_elaborate.in.txt");
 
     return 0;
 }
