@@ -4,7 +4,8 @@ Google Team Programming challange for 2022 where programmers, developers and eng
 to solve a coding engineering problem under a limited amount of time while working as a team.
 
 ## The Team:
-- Siyabonga Fortune AKA Sudo S
+- Siyabonga Fortune (Sudo S)
+- Ekansh San
 
 ## Practice Problems links
 Source: hackerearth.com
