@@ -41,7 +41,7 @@ class Project {
 };
 
 
-void reaFile(string filename) {
+void readFile(string filename) {
 
     int total_cb; // contributors
     int total_p; //projects
@@ -56,12 +56,16 @@ void reaFile(string filename) {
         string line;
 
         getline(file, line); // get first line
-        total_cb = line[0] - '0';
-        total_p  = line[2] - '0';
+
+        istringstream iss_1(line);
+        vector<string> totals { istream_iterator<string>{iss_1},
+                    istream_iterator<string>{}};
+        total_cb = stoi(totals[0]);
+        total_p  = stoi(totals[1]);
+
         cout << "\nContributors: " << total_cb << " Projects: " << total_p << "\n\n";
 
         for (int t_1 = 0; t_1 < total_cb; t_1++) {
-
             getline(file, line);
 
             // convert string to vector
@@ -87,6 +91,7 @@ void reaFile(string filename) {
             con.printDetails();
             contributors.push_back(con);
         }
+
         for (int t_2 = 0; t_2 < total_p; t_2++) {
             getline(file, line);
 
@@ -116,6 +121,8 @@ void reaFile(string filename) {
             Projects.push_back(pj);
         }
 
+        // Solve 
+
         file.close();
     }
 }
@@ -123,8 +130,12 @@ void reaFile(string filename) {
 
 int main() {
 
-    reaFile("a_an_example.in.txt");
-
+    readFile("a_an_example.in.txt");
+    readFile("b_better_start_small.in.txt");
+    readFile("c_collaboration.in.txt");
+    readFile("d_dense_schedule.in.txt");
+    readFile("e_exceptional_skills.in.txt");
+    readFile("f_find_great_mentors.in.txt");
 
     return 0;
 }
