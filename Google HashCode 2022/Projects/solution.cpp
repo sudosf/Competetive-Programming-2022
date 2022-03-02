@@ -10,7 +10,7 @@ class Contributor {
         string name;
         vector<pair<string, int> > skills; 
 
-        void printDetails() {
+        void printSkills() {
             cout << name << ": ";
             
             for (auto p : skills) 
@@ -28,43 +28,84 @@ class Project {
         int bb;
         int roles;
         vector<pair<string, int> > skills;
+        vector<string> con; 
 
-        void printDetails() {
+        void printSkills() {
 
             cout <<"Project: "<< name;
             cout << " -> Skills: ";
             for (auto p : skills) 
                 cout <<"("<< p.first << ", " << p.second << ") ";
-        
+            cout << endl;
+        }
+
+        void printContributors() {
+            cout <<"Project: "<< name;
+            cout << " -> Contributors: ";
+            
+            for (auto c : con) cout << c << " ";
             cout << endl;
         }
 };
 
+vector<Project> allocateProjects(vector<Contributor> contributors, vector<Project> projects) {
+    vector<Project> accepted;
 
-void readFile(string filename) {
+    for (auto pj : projects) {
 
-    int total_cb; // contributors
-    int total_p; //projects
+        for (auto pj_skill : pj.skills) {
+           
+            string pj_skill_name = pj_skill.first;
+            int pj_lvl = pj_skill.second;
+
+            for (auto con : contributors) {
+                for (auto con_skill : con.skills) {
+                
+                    string con__skill_name = con_skill.first;
+                    int con_lvl = con_skill.second;
+                    
+                    if (pj_skill_name == con__skill_name) {
+                        
+                        if (con_lvl >= pj_lvl) {
+                            pj.con.push_back(con.name);
+                        }
+                    }
+                }
+            }
+        }
+        accepted.push_back(pj);
+        pj.printContributors();
+    }
+
+    cout << "\nsize: "<< accepted.size() << "\n";
+
+    return accepted;
+}
+
+vector<Project> readFile(string filename) {
+
+    int total_cb, total_p; // contributors, projects
 
     vector<Contributor> contributors;
-    vector<Project> Projects;
+    vector<Project> projects;
 
     // read from file
     file.open(filename, ios::in);
     if (file.is_open()) {
 
         string line;
-
         getline(file, line); // get first line
 
         istringstream iss_1(line);
         vector<string> totals { istream_iterator<string>{iss_1},
                     istream_iterator<string>{}};
+
         total_cb = stoi(totals[0]);
         total_p  = stoi(totals[1]);
 
-        cout << "\nContributors: " << total_cb << " Projects: " << total_p << "\n\n";
+        cout << "\nContributors: " << total_cb << " Projects: " << total_p << "\n";
 
+        // get contributors
         for (int t_1 = 0; t_1 < total_cb; t_1++) {
             getline(file, line);
 
@@ -88,10 +129,10 @@ void readFile(string filename) {
                 con.skills.push_back(skill);
             }
 
-            con.printDetails();
             contributors.push_back(con);
         }
 
+        // get projects
         for (int t_2 = 0; t_2 < total_p; t_2++) {
             getline(file, line);
 
@@ -117,11 +158,29 @@ void readFile(string filename) {
                 pj.skills.push_back(skill);
             }
 
-            pj.printDetails();
-            Projects.push_back(pj);
+            projects.push_back(pj);
         }
+        file.close();
+    }
 
-        // Solve 
+    return allocateProjects(contributors, projects);
+}
+
+void writeFile(vector<Project> projects, string filename) {
+       
+    // write to file
+    file.open(filename, ios::out);
+    if (file.is_open()) {
+
+        file << projects.size() << "\n";
+        for(auto pj : projects) {
+            if (pj.con.size() > 0) {
+                file << pj.name << "\n";
+            
+                for (auto c : pj.con) file << c << " ";
+                file << "\n";
+            }
+        }
 
         file.close();
     }
@@ -130,12 +189,12 @@ void readFile(string filename) {
 
 int main() {
 
-    readFile("a_an_example.in.txt");
-    readFile("b_better_start_small.in.txt");
-    readFile("c_collaboration.in.txt");
-    readFile("d_dense_schedule.in.txt");
-    readFile("e_exceptional_skills.in.txt");
-    readFile("f_find_great_mentors.in.txt");
+    vector<Project> result = readFile("a_an_example.in.txt");
+    writeFile(result, "1.txt");
+   // readFile("c_collaboration.in.txt");
+    //readFile("d_dense_schedule.in.txt");
+    //readFile("e_exceptional_skills.in.txt");
+    //readFile("f_find_great_mentors.in.txt");
 
     return 0;
 }
