@@ -1,0 +1,6 @@
+/home/fortune/Documents/Coding Puzzles/Competetive-Programming-2022/Code Jam/Csharp/Csharp/bin/Debug/Csharp.exe
+/home/fortune/Documents/Coding Puzzles/Competetive-Programming-2022/Code Jam/Csharp/Csharp/bin/Debug/Csharp.pdb
+/home/fortune/Documents/Coding Puzzles/Competetive-Programming-2022/Code Jam/Csharp/Csharp/obj/x86/Debug/Csharp.csprojAssemblyReference.cache
+/home/fortune/Documents/Coding Puzzles/Competetive-Programming-2022/Code Jam/Csharp/Csharp/obj/x86/Debug/Csharp.csproj.CoreCompileInputs.cache
+/home/fortune/Documents/Coding Puzzles/Competetive-Programming-2022/Code Jam/Csharp/Csharp/obj/x86/Debug/Csharp.exe
+/home/fortune/Documents/Coding Puzzles/Competetive-Programming-2022/Code Jam/Csharp/Csharp/obj/x86/Debug/Csharp.pdb

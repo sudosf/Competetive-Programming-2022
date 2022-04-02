@@ -1,0 +1,26 @@
+﻿<Properties StartupConfiguration="{5EFD8D89-C3B0-4675-9634-903193391028}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Csharp/PunchedCards.cs">
+    <Files>
+      <File FileName="Csharp/PunchedCards.cs" Line="9" Column="1" />
+      <File FileName="Csharp/Program.cs" Line="7" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Csharp" expanded="True">
+            <Node name="Csharp" expanded="True">
+              <Node name="PunchedCards.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.ItemProperties.Csharp PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
