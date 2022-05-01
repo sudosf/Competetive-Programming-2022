@@ -1,4 +1,4 @@
-<h1> Coding Puzzles and Problems solved </h1>
+<h1> Coding Puzzles Solutions </h1>
 
 <p>
  <h2> 
@@ -14,25 +14,25 @@
   </ul>
 </p>
   
+<br>
 <p>
 <h3> Practice Problems </h3>
-  
 <ul>  
   <li>
-    Problem: Cost of Balloons
-  - https://www.hackerearth.com/practice/basic-programming/input-output/basics-of-input-output/practice-problems/algorithm/mojtaba-prepares-contest-29b2a044/
+    Problem: Cost of Balloons <br>
+    https://www.hackerearth.com/practice/basic-programming/input-output/basics-of-input-output/practice-problems/algorithm/mojtaba-prepares-contest-29b2a044/
   </li>
   <li>
-    Problem: Factorial!
-  - https://www.hackerearth.com/practice/basic-programming/input-output/basics-of-input-output/practice-problems/algorithm/find-factorial/
+    Problem: Factorial! <br>
+    https://www.hackerearth.com/practice/basic-programming/input-output/basics-of-input-output/practice-problems/algorithm/find-factorial/
   </li>   
   <li>
-    Problem: Minimum Number of Steps
-    - https://www.hackerearth.com/practice/basic-programming/input-output/basics-of-input-output/practice-problems/algorithm/make-all-equal-90a21ab2/
+    Problem: Minimum Number of Steps <br>
+    https://www.hackerearth.com/practice/basic-programming/input-output/basics-of-input-output/practice-problems/algorithm/make-all-equal-90a21ab2/
   </li>  
  <li>
-   Problem: Deleting arrays
-  - https://www.hackerearth.com/practice/algorithms/greedy/basics-of-greedy-algorithms/practice-problems/algorithm/array-deletion-2-aee9dffe/
+   Problem: Deleting arrays <br>
+   https://www.hackerearth.com/practice/algorithms/greedy/basics-of-greedy-algorithms/practice-problems/algorithm/array-deletion-2-aee9dffe/
 </li>
   
 <ul>
