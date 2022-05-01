@@ -1,16 +1,47 @@
-// Working program with FastReader
 import java.io.*;
 import java.util.*;
 
 public class SubString {
 
+	public static int simpleSubStrCount(String str, String pattern) {
+		int N = str.length();
+		int M = pattern.length();
+		int totalPatternCount = 0;
+
+		// loop through each char in pattern[] one by one 
+		for (int i = 0; i <= N - M; i++) {
+			/* For current index i, check for
+			pattern match */
+			int j;           
+			for (j = 0; j < M; j++) {
+				if (str.charAt(i + j) != pattern.charAt(j)) {
+					break;
+				}
+			}
+
+			// if pat[0...M-1] = txt[i, i+1, ...i+M-1]
+			if (j == M) {               
+				totalPatternCount++;               
+				j = 0;               
+			}           
+	   } 
+
+		return totalPatternCount;
+	}
+
 	public static void main(String[] args) {
+		/*
 		FastReader input = new FastReader();
 		
 		int T = input.nextInt();
 		for (int i = 0; i < T; i++) {
 			// code here
 		}
+		*/
+
+		String s = "aaaaa";
+		String pat = "aa";
+		System.out.println(simpleSubStrCount(s, pat));
 	}
 
 	static class FastReader {
