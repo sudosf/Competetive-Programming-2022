@@ -10,7 +10,7 @@
 <p>
   <h3> Featured intermediate to complex problems </h3>
   <ul>
-    <li>KMP Algorithm for Pattern Serching</li>
+    <li>KMP Algorithm for Pattern Searching</li>
   </ul>
 </p>
   
